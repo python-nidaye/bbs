@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'post',
+    'user',
 
 ]
 
@@ -127,3 +128,7 @@ STATIC_URL = '/statics/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "statics"),
 ]
+
+#配置媒体文件
+MEDIA_ROOT = 'medias'
+MEDIA_URL = '/medias/'
