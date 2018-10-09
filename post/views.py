@@ -9,7 +9,7 @@ def create_post(request):
         post = Post.objects.create(title=title,content=content)
         return redirect('/post/read/?post_id=%d' % post.id)
     else:
-        return render(request,'create_post.html',{})
+        return render(request,'create_post.html')
 
 
 def edit_post(request):
