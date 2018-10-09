@@ -13,13 +13,14 @@ def create_post(request):
 
 
 def edit_post(request):
-    post_id = int(request.GET.get('post_id'))
-    post = Post.objects.get(pk=post_id)
-    return render(request,'edit_post.html',{'post':post})
+
+    return render(request,'edit_post.html',{})
 
 
 def read_post(request):
-    return render(request,'read_post.html',{})
+    post_id = int(request.GET.get('post_id'))
+    post = Post.objects.get(pk=post_id)
+    return render(request,'read_post.html',{'post':post})
 
 
 def delete_post(request):
